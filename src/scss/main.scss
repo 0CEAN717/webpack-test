@@ -1,13 +1,165 @@
 @import "~normalize.css";
-
 @import "_variables";
-@import "modules/hello.scss";
+@import "modules/week-summary.scss";
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500&display=swap');
+
+html {
+    box-sizing: border-box;
+   }
+
+*, *:before, *:after {
+    box-sizing: inherit;
+   }
 
 body {
-  background: $wtf;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    font-family: 'Zilla Slab', serif;
+}
+
+section {
+    background-color: white;
+}
+
+.input:focus {
+    background: burlywood;
+}
+
+h1 {
+    color: #92140C;
+}
+
+h2 {
+    color: rgb(34, 22, 85);
+}
+
+.header {
+    background-color: teal;
+    min-height: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navigation {
+    padding: 16px;
+    display: none;
+}
+
+.navigation__link {
+    color: #92140C;
+    display: block;
+    margin: 0 0 16px;
+}
+
+.navigation__link:hover {
+    color: black;
+}
+
+.navigation__link:visited {
+    color: yellow;
+}
+
+.navigation__link:focus {
+    border: 3px solid yellow;
+}
+
+.navigation__link--homepage {
+    color: black;
+}
+
+.navigation--open {
+    display: block;
+}
+
+.list {
+    list-style:none ;
+}
+
+.table {
+    width: 100%;
+}
+
+.klasa-z-js {
+    background-color: yellow;
+}
+
+.main {
+    max-width: 1000px;
+    margin: 0 auto;
+    &__heading {
+        color: #92140C;
+    }
+}
+
+.about {
+    &__heading {
+        color: #1460aa;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: red ;
+            margin-right: 16px;
+        }
+    }
+    &__link {
+        color: #92140C;
+    }
+    &__picture {
+        display: block;
+        max-width: 100%;
+    }
+}
+
+.notes {
+
+}
+
+.notes_heading {
+    color: #1460aa;
+}
+
+.footer {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer__link {
+    color: #1460aa;
+}
+
+.hamburger {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    border: none;
+    background: none;
+}
+
+.grid {
+ 
+}
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 15px;
+    }
+
+    .navigation {
+        padding: 16px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-around;
+        height: 100px;
+        align-items: center;
+    }
+
 }

@@ -1,0 +1,32 @@
+.week-summary {
+    padding: 16px;
+    border: 1px gray solid;
+    margin-bottom: 10px;
+    background-color: #fff;
+
+    &--sepcial {
+        border: 1px red solid;
+    }
+    &__description {
+        color: red;
+    }
+    &__title {
+        color: #95f800;
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: tomato;
+            border-radius: 50%;
+        }
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: tomato;
+            border-radius: 50%;
+        }        
+    }
+}
